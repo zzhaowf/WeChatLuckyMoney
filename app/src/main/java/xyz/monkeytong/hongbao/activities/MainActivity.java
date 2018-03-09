@@ -16,12 +16,12 @@ import android.view.accessibility.AccessibilityManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.tencent.bugly.Bugly;
+
+import java.util.List;
+
 import xyz.monkeytong.hongbao.R;
 import xyz.monkeytong.hongbao.utils.ConnectivityUtil;
 import xyz.monkeytong.hongbao.utils.UpdateTask;
-
-import java.util.List;
 
 
 public class MainActivity extends Activity implements AccessibilityManager.AccessibilityStateChangeListener {
@@ -36,7 +36,7 @@ public class MainActivity extends Activity implements AccessibilityManager.Acces
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //CrashReport.initCrashReport(getApplicationContext(), "900019352", false);
-        Bugly.init(getApplicationContext(), "900019352", false);
+//        Bugly.init(getApplicationContext(), "900019352", false);
         setContentView(R.layout.activity_main);
         pluginStatusText = (TextView) findViewById(R.id.layout_control_accessibility_text);
         pluginStatusIcon = (ImageView) findViewById(R.id.layout_control_accessibility_icon);
@@ -108,19 +108,19 @@ public class MainActivity extends Activity implements AccessibilityManager.Acces
     }
 
     public void openGitHub(View view) {
-        Intent webViewIntent = new Intent(this, WebViewActivity.class);
-        webViewIntent.putExtra("title", getString(R.string.webview_github_title));
-        webViewIntent.putExtra("url", "https://github.com/geeeeeeeeek/WeChatLuckyMoney");
-        startActivity(webViewIntent);
+//        Intent webViewIntent = new Intent(this, WebViewActivity.class);
+//        webViewIntent.putExtra("title", getString(R.string.webview_github_title));
+//        webViewIntent.putExtra("url", "https://github.com/geeeeeeeeek/WeChatLuckyMoney");
+//        startActivity(webViewIntent);
     }
 
     public void openUber(View view) {
-        Intent webViewIntent = new Intent(this, WebViewActivity.class);
-        webViewIntent.putExtra("title", getString(R.string.webview_uber_title));
-        String[] couponList = new String[]{"https://dc.tt/oTLtXH2BHsD", "https://dc.tt/ozFJHDnfLky"};
-        int index = (int) (Math.random() * 2);
-        webViewIntent.putExtra("url", couponList[index]);
-        startActivity(webViewIntent);
+//        Intent webViewIntent = new Intent(this, WebViewActivity.class);
+//        webViewIntent.putExtra("title", getString(R.string.webview_uber_title));
+//        String[] couponList = new String[]{"https://dc.tt/oTLtXH2BHsD", "https://dc.tt/ozFJHDnfLky"};
+//        int index = (int) (Math.random() * 2);
+//        webViewIntent.putExtra("url", couponList[index]);
+//        startActivity(webViewIntent);
     }
 
     public void openSettings(View view) {
